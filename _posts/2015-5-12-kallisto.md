@@ -56,9 +56,9 @@ Well, first I don't much care for the likelihood they use for
 their quantification (page 7 of their preprint; unfortunately the equations
 are un-numbered, but in this case it is the only equation in the text!). 
 Let's see if I can render it in markdown here:
-$L(\alpha) = \prod_f \sum_t y_{f,t} \alpha_t$.
+$$L(\alpha) = \prod_f \sum_t y_{f,t} \alpha_t.$$
 
-The product here is over fragments (reads) $f$, and the sum is over
+The product here is over fragments (reads) $$f$$, and the sum is over
 transcripts $t$. Here $y_{f,t}$ is an indicator for whether fragment $f$
 is compatible with transcript $t$, and the parameters $\alpha_t$ 
 (to be estimated) are described as
