@@ -59,22 +59,24 @@ Let's see if I can render it in markdown here:
 $$L(\alpha) = \prod_f \sum_t y_{f,t} \alpha_t.$$
 
 The product here is over fragments (reads) $$f$$, and the sum is over
-transcripts $t$. Here $y_{f,t}$ is an indicator for whether fragment $f$
-is compatible with transcript $t$, and the parameters $\alpha_t$ 
+transcripts $$t$$. Here $$y_{f,t}$$ is an indicator for whether fragment $$f$$
+is compatible with transcript $$t$$, and the parameters $$\alpha_t$$ 
 (to be estimated) are described as
 "the probabilities of selecting fragments from transcripts".
 
 The provenance of this likelihood is unclear to me from their text, but
 I think there is a term missing,
  corresponding to the probability of observing a read given
-that it was selected from transcript $t$. Roughly this should be of order 
-$1/(l_t-r+1)$ where $l_t$ is the length of the transcript $t$ and $r$ the
- length of the read ($r$ say). 
+that it was selected from transcript $$t$$. Roughly this should be of order 
+$$1/(l_t-r+1)$$ where $$l_t$$ is the length of the transcript $$t$$ and $$r$$ the
+ length of the read. 
 That is, it should be
-$L(\alpha) = \prod_f \sum_t y_{f,t} \alpha_t (1/(l_t-r+1))$.
-The idea here is that there are $l_t-r+1$
-possible reads of length $r$ that could be emitted by a transcript 
-of length $l_t$, and if we assume they are all equally likely we get $1/(l_t-r+1)$ for each.  
+
+$$L(\alpha) = \prod_f \sum_t y_{f,t} \alpha_t (1/(l_t-r+1)).$$
+
+The idea here is that there are $$l_t-r+1$$
+possible reads of length $$r$$ that could be emitted by a transcript 
+of length $$l_t$$, and if we assume they are all equally likely we get $$1/(l_t-r+1)$$ for each.  
 More sophisticated models are certainly possible, but it seems there
 should be something here.  Further, it doesn't seem that this would complicate
 inference, so it might be interesting to try including it and
