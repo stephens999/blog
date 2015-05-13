@@ -94,6 +94,11 @@ one above the other. Of course the junction reads
 would break the symmetry, and the method does make use of these, but
 I think this illustrates a potential problem with their likelihood.
  
+[Edit: after posting this, the kallisto authors informed me 
+that their likelihood without the length term was actually a typo in the 
+preprint, and that the length term is implemented in the software. 
+Good to know!]
+
 The second comment is rather broader, and it relates to whether 
 transcript quantification is even really the right way to proceed. 
 The problem is that, when several transcripts (for the same gene say) are very similar, their abundances are not individually identifiable. 
